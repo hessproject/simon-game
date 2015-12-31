@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Simon Game (In Progress)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+<body>
+	
+	
+	<div class='title'>
+		<h1 align='center'>Simon</h1>
+		<h4 align='center' id='roundNumber'>Game Not Started</h4>
+		<h4 align='center' id='gameStatus'></h4>
+	</div>
+	
+	<div class='board'>
+		<div align="center">
+			<div class='board-button board-top-left' onclick="simon.pressButton(1)"></div>
+			<div class='board-button board-top-right' onclick="simon.pressButton(2)"></div>
+		</div>
+		<div align="center">
+			<div class='board-button board-bot-left' onclick="simon.pressButton(3)"></div>
+			<div class='board-button board-bot-right' onclick="simon.pressButton(4)"></div>
+		</div>
+	</div>
+	
+	<div class='controls' align='center'>
+		<input type='checkbox' id='strict-check'>Strict Mode</input>
+		<input type='checkbox' id='unlimited-check'>Unlimited Rounds</input>
+		<br>
+		<button onclick='simon.startGame()'>Start/Reset</button>
+	</div>
+
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
