@@ -119,8 +119,6 @@ var SimonGame = (function() {
 			nextRound();
 			strictMode = $("#strict-check").prop("checked");
 			unlimitedRounds = $("#unlimited-check").prop("checked");
-			console.log(strictMode);
-			console.log(unlimitedRounds);
 		};
 
 		this.pressButton = function(buttonNumber) {
