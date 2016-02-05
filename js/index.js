@@ -1,7 +1,3 @@
-/*TODOS 
--Add on/off switch
-*/
-
 var SimonGame = (function() {
 	//private variables
 	var audio1 = new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'); //green
@@ -53,11 +49,14 @@ var SimonGame = (function() {
 				break;
 		}
 	}
-
+	
+	//Add a random button to the simon sequence
 	function addToSequence() {
+		
 		sequence.push(Math.floor(Math.random() * 4) + 1);
 	}
 
+	//Play through and light all the buttons of the current simon sequence
 	function playSequence(gameSpeed) {
 		playingSequence = true;
 		$('#gameStatus').html("Playing Sequence");
@@ -76,6 +75,7 @@ var SimonGame = (function() {
 		}
 	}
 
+	//Start the next round: Add to the sequence, play the sequence, and speed up on the 5th, 9th, and 13th round.
 	function nextRound() {
 		addToSequence();
 		var roundNumber = simon.getRound();
@@ -94,6 +94,7 @@ var SimonGame = (function() {
 		},1000);
 	}
 	
+	//Check user response against the current sequence
 	function checkResponse() {
 		for (var i = 0; i < response.length; i++) {
 			if (response[i] != sequence[i]) {
@@ -135,7 +136,7 @@ var SimonGame = (function() {
 						gameInProgress = false;
 					}
 					
-					//for non-strict mode, try again
+					//for non-strict mode, play the sequence and let the user try again
 					if(!strictMode && playingSequence===false){
 						$("#gameStatus").html("Incorrect Response: Try Again");
 						playingSequence = true;
