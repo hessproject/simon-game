@@ -52,7 +52,6 @@ var SimonGame = (function() {
 	
 	//Add a random button to the simon sequence
 	function addToSequence() {
-		
 		sequence.push(Math.floor(Math.random() * 4) + 1);
 	}
 
